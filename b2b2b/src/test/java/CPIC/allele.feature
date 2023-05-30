@@ -7,7 +7,6 @@ Scenario: Verify that each ethnicity frequency is lower than 1 or null
     * def schema = read('classpath:CPIC/helpers/schemas/allele.json')
     Given path 'allele'
     Given param genesymbol = "eq.CYP2D6"
-    Given param name = "eq.*1"
     When method get
     Then status 200
     And match response == schema
