@@ -1,0 +1,24 @@
+12:45:27.563 [com.intuit.karate.cli.Main.main()] INFO  com.intuit.karate - Karate version: 1.4.0
+12:45:29.761 [com.intuit.karate.cli.Main.main()] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+12:45:29.821 [com.intuit.karate.cli.Main.main()] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 6
+12:45:33.733 [com.intuit.karate.cli.Main.main()] INFO  com.intuit.karate - karate.env system property was: null 
+12:45:34.730 [com.intuit.karate.cli.Main.main()] DEBUG com.intuit.karate - request:
+1 > GET https://api.cpicpgx.org/v1/allele?genesymbol=eq.CYP2D6&name=eq.*1
+1 > Host: api.cpicpgx.org
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:45:36.039 [com.intuit.karate.cli.Main.main()] DEBUG com.intuit.karate - response time in milliseconds: 1293
+1 < 200
+1 < Server: nginx/1.10.3 (Ubuntu)
+1 < Date: Tue, 30 May 2023 09:45:35 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Content-Range: 0-0/*
+1 < Content-Location: /v1//allele?genesymbol=eq.CYP2D6&name=eq.%2A1
+[{"id":777937,"version":151,"genesymbol":"CYP2D6","name":"*1","functionalstatus":null,"clinicalfunctionalstatus":"Normal function","clinicalfunctionalsubstrate":null,"activityvalue":"1.0","definitionid":777936,"citations":[],"strength":null,"functioncomments":null,"findings":null,"frequency":{"Latino": 0.36455274, "American": 0.5008011, "European": 0.28500712, "Oceanian": 0.6170194, "East Asian": 0.25778997, "Near Eastern": 0.24876314, "Central/South Asian": 0.29324096, "Sub-Saharan African": 0.041160643, "African American/Afro-Caribbean": 0.21115738},"inferredfrequency":true}]
+
+12:45:38.493 [com.intuit.karate.cli.Main.main()] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/CPIC/allele.feature
