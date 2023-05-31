@@ -4,12 +4,13 @@ Background:
     Given url "https://api.cpicpgx.org/v1"
 
 Scenario: Verify that each ethnicity frequency is lower than 1 or null
-    * def schema = read('classpath:CPIC/helpers/schemas/allele.json')
+    * def schema = read('classpath:CPIC/helpers/schemas/schema.json')
+    * def alleleSchema = schema.alleleSchema
     Given path 'allele'
     Given param genesymbol = "eq.CYP2D6"
     When method get
     Then status 200
-    And match response == schema
+    And match each response == alleleSchema
     * def allFrequencies = karate.map(response, function(x){ return x.frequency })
     And def isValidFrequency = function(x) { return x < 1 || x === null }
     And def frequenciesValid = karate.forEach(allFrequencies, isValidFrequency)

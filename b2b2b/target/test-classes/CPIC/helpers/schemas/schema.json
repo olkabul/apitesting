@@ -1,0 +1,34 @@
+{
+    "frequencySchema" : 
+    {
+        "Latino": "##number",
+        "American": "##number",
+        "European": "##number",
+        "Oceanian": "##number",
+        "East Asian": "##number",
+        "Near Eastern": "##number",
+        "Central/South Asian": "##number",
+        "Sub-Saharan African": "##number",
+        "African American/Afro-Caribbean": "##number"
+    }, 
+    
+    "alleleSchema":        
+    {
+            "id": "#number",
+            "version": "#number",
+            "genesymbol": "#string",
+            "name": "#string",
+            "functionalstatus": "##string",
+            "clinicalfunctionalstatus": "##string",
+            "clinicalfunctionalsubstrate": "##string",
+            "activityvalue": "##string",
+            "definitionid": "##number",
+            "citations": "##(null|#[])",
+            "strength": "##string",
+            "functioncomments": "##string",
+            "findings": "##string",
+            "frequency": "##() frequencySchema", 
+            "inferredfrequency": "#boolean"
+        }
+    
+}
